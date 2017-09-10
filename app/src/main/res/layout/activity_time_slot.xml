@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_time_slot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pinalmeruliya.myapplication.TimeSlotActivity">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="63dp">
+
+            <TextView
+                android:id="@+id/textView_date_slot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="select date and time:"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+
+
+
+
+            <EditText android:id="@+id/editText_date_slot"
+                android:background="@drawable/editedtextbox"
+                android:layout_height="50dp"
+                android:layout_width="match_parent"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="50dp"
+                android:layout_below="@+id/textView_date_slot"
+                android:hint="yyyy/mm/dd" />
+
+
+        <EditText android:id="@+id/editText_time_slot"
+            android:background="@drawable/editedtextbox"
+            android:layout_height="50dp"
+            android:layout_width="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="50dp"
+            android:layout_below="@+id/editText_date_slot"
+            android:hint="hh:mm AM/PM" />
+
+
+
+        <TextView
+            android:id="@+id/textView_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/editText_time_slot"
+
+            android:text="You can book parking with us only for one hour*"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+
+        <Button
+            android:id="@+id/Continue"
+            android:text="Continue"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp"
+            android:layout_width="270dp"
+            android:layout_height="60dp"
+            android:background="@drawable/buttonshape"
+            android:shadowColor="#27E81A"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:layout_below="@+id/textView_limit"
+
+            android:layout_marginTop="30dp"
+
+
+            android:layout_centerHorizontal="true" />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
+
+
+
+

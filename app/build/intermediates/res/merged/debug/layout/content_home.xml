@@ -1,0 +1,160 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.pinalmeruliya.myapplication.MapsActivity">
+    </fragment>
+
+    <AutoCompleteTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@android:color/white"
+        android:id="@+id/et_address"
+        android:drawableRight="@android:drawable/ic_menu_search"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="60dp"
+        android:singleLine="true"
+        android:paddingRight="5dp"
+        android:background="#88000000"/>
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/parkinglayout"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@android:color/holo_green_dark"
+            android:layout_above="@+id/btnlay">
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="100dp"
+                android:background="@android:color/black"
+                android:id="@+id/parkImage"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@android:color/holo_red_dark"
+                android:layout_height="100dp"
+                android:padding="5dp"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/parkImage"
+                android:weightSum="1">
+                <TextView
+                    android:text="we dont found any location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewTitleAddress"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:text="we dont found any location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subTitleAddress"
+                    android:layout_below="@+id/textViewTitleAddress"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+            <TextView
+                android:text="60 for 4 hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtprice"
+                android:layout_toEndOf="@+id/parkImage"
+                android:padding="10dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:textColor="@android:color/white" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:text="o"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:text="1.5 min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distanceFrom"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:id="@+id/btnlay"
+                android:layout_alignParentBottom="true"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:text="Navigate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/holo_purple"
+                    android:layout_weight="1"
+                    android:id="@+id/navigate"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:text="Book"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/white"
+                    android:background="@android:color/darker_gray"
+                    android:layout_weight="1"
+                    android:id="@+id/book"
+                    android:textSize="18sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp"
+            android:visibility="gone"
+            android:id="@+id/nolocationlayout"
+            android:background="@android:color/holo_red_dark"
+            android:layout_alignParentBottom="true">
+            <TextView
+                android:text="we dont found any location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView2"
+                android:gravity="center_horizontal"
+                android:textSize="30sp"
+                android:textColor="@android:color/white" />
+            <Button
+                android:text="Change location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_green_dark"
+                android:id="@+id/changelocation"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_booking"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pinalmeruliya.myapplication.BookingDetailsActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+
+        android:id="@+id/parkImage"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/parkinglayout"
+            android:background="@android:color/holo_green_dark"
+            android:layout_above="@+id/btnlay"
+            android:layout_below="@+id/parkImage">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:background="@android:color/holo_red_dark"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:text="TitleAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/textViewTitleAddress"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/white" />
+
+                <TextView
+                    android:text="SubtitleAdress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/subTitleAddress"
+                    android:layout_marginTop="8dp"
+                    android:layout_below="@+id/textViewTitleAddress"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/white" />
+
+                <Button
+                    android:text="Read Reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/Reviews"
+                    android:background="@drawable/buttonshape"
+                    android:layout_marginTop="5dp"/>
+
+
+            </LinearLayout>
+            <TextView
+                android:text="60 for 4 hours"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtprice"
+                android:padding="10dp"
+                android:layout_alignParentBottom="true"
+                android:textSize="15sp"
+                android:textColor="@android:color/white" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentBottom="true">
+                <TextView
+                    android:text="1.5 min"
+                    android:layout_width="176dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/emailindata"
+                    android:textSize="15sp"
+                    android:layout_marginTop="100dp"
+                    android:textColor="@android:color/white" />
+
+
+                <TextView
+                    android:text="Few Km away"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:textSize="25sp"
+                    android:textColor="@android:color/white" />
+                <TextView
+                    android:text="1.5 min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/distanceFrom"
+                    android:textSize="15sp"
+                    android:layout_marginRight="10dp"
+                    android:textColor="@android:color/white" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:id="@+id/btnlay"
+            android:layout_alignParentBottom="true"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:text="Navigate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@android:color/holo_purple"
+                android:layout_weight="1"
+                android:id="@+id/navigate"
+                android:textSize="18sp" />
+
+            <Button
+                android:text="Book"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/white"
+                android:background="@android:color/darker_gray"
+                android:layout_weight="1"
+                android:id="@+id/book"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+
+</RelativeLayout>

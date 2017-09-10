@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_profileactivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.pinalmeruliya.myapplication.EditProfileActivity">
+
+
+    <Button
+        android:id="@+id/Done"
+        android:text="Done"
+        android:textColor="#F9050101"
+        android:textSize="20dp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonprofile"
+        android:shadowColor="#FCF0FC"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginBottom="89dp"
+        android:layout_alignBottom="@+id/profilepassword"
+        android:layout_alignStart="@+id/profilepassword" />
+
+    <Button
+        android:id="@+id/profilepassword"
+        android:text="Change Password"
+        android:textColor="#F9050101"
+        android:textSize="20dp"
+        android:layout_width="270dp"
+        android:layout_height="60dp"
+        android:background="@drawable/buttonprofile"
+        android:shadowColor="#FCF0FC"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="5"
+        android:layout_marginBottom="57dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout">
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/usernameprofile"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/prompt_username"
+                android:imeActionId="@+id/login"
+                android:imeActionLabel="@string/action_sign_in_short"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPersonName"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:layout_above="@+id/emailprofile"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="30dp"
+                android:textColorLink="?attr/actionMenuTextColor" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+            android:id="@+id/emailprofile"
+            android:layout_width="241dp"
+            android:layout_height="wrap_content"
+            android:hint="Email"
+            android:imeActionId="@+id/login"
+            android:imeActionLabel="@string/action_sign_in_short"
+            android:imeOptions="actionUnspecified"
+            android:inputType="textEmailAddress"
+            android:maxLines="1"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/phoneprofile"
+            android:layout_alignStart="@+id/usernameprofile"
+            android:singleLine="false"
+            android:selectAllOnFocus="true"
+            android:textColorLink="?attr/actionMenuTextColor" />
+
+    </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <EditText
+                android:id="@+id/phoneprofile"
+                android:layout_width="241dp"
+                android:layout_height="wrap_content"
+                android:hint="Phone"
+                android:inputType="textPhonetic"
+                android:maxLines="1"
+                android:layout_marginBottom="26dp"
+                android:layout_above="@+id/Done"
+                android:layout_alignEnd="@+id/emailprofile"
+                android:textColorLink="?attr/actionMenuTextColor" />
+
+        </android.support.design.widget.TextInputLayout>
+
+
+
+    </LinearLayout>
+        </RelativeLayout>
+</RelativeLayout>
